@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		09CF1C01D68582BD89F59AAA /* ContactWebSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B556F22F76C302E038D32EF /* ContactWebSheet.swift */; };
 		1D415A8C95394C6016E7C2A6 /* OrbitSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DB24B725B4211EE4F4E3A /* OrbitSession.swift */; };
 		202DB6936488B0A87082EBB4 /* MealOrbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4723BA18C77014CEB8129F88 /* MealOrbitTests.swift */; };
 		31BA679765B97FEBECD8CC43 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D560069BA7822F655AD5E /* Keychain.swift */; };
+		3E9059535198FC7E0F8D9B1A /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343D7087C62C7D07A5B6EF4F /* APIConfig.swift */; };
 		4897F574F86C33AD412B64B5 /* OrbitPrimitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2058C62331F75F749DEC60A /* OrbitPrimitives.swift */; };
 		5F1F2CCE97C11472E680CC05 /* OrbitSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52EACBA155A029F3B5E5779 /* OrbitSchema.swift */; };
 		5FD3835B0BB621F9A93A56AD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 7D5A6CBADA372EA7D09DB218 /* PrivacyInfo.xcprivacy */; };
@@ -21,8 +23,10 @@
 		935A53566F846F49DFEC137A /* HorizonTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388E633DF18D5A32BB08B2A /* HorizonTransferService.swift */; };
 		96A7E4E0B3A1CA5373055BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A826CE76BAC7B7BCE653D34B /* Assets.xcassets */; };
 		A2081480E528987D5E480BF3 /* LogWishGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA952A9C5FA525F86A1FEB06 /* LogWishGoals.swift */; };
+		AA28491A3C0E14DFD2C68654 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 46A3DC2D87A86190F00EA20B /* Alamofire */; };
 		B7098F5AC683BA47BFE0E25E /* DossierAssignLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FA0594EA272A567B0CB61 /* DossierAssignLaunch.swift */; };
 		C658117D058FE35E7D7F1B87 /* OrbitComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB420514B5E1CB4D70E4F5C5 /* OrbitComponents.swift */; };
+		CC402FC86EC2C1D6D2397B84 /* ScreenshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91174BF10E2C82F3EABAE0A9 /* ScreenshotTests.swift */; };
 		CF355A6807938709E67CF5B8 /* CatalogAndScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CBEB9080D77391040ECEDF /* CatalogAndScan.swift */; };
 		D29973127CA43EAC26FA7834 /* CommandDeckAndHorizon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457034087191C9327D7D6C9 /* CommandDeckAndHorizon.swift */; };
 		DE1906391F2478ADE1866C15 /* OrbitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693741AD57E56D0A3326CB62 /* OrbitStore.swift */; };
@@ -31,6 +35,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		20B78D7A98636CE372467AE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8FA55F0C08C4C96A838A6F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DE4F8B222FF18E881C6A37F;
+			remoteInfo = MealOrbit;
+		};
 		9DF449E4AFA2A22CE42F5530 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C8FA55F0C08C4C96A838A6F9 /* Project object */;
@@ -44,15 +55,18 @@
 		083FECD96698614B1797E7D1 /* OpenFoodFactsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodFactsClient.swift; sourceTree = "<group>"; };
 		0D5C2BD38B9468BA52862B74 /* TelemetryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryService.swift; sourceTree = "<group>"; };
 		15A14D187F8954C73A0FE8FB /* DemoShelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoShelf.swift; sourceTree = "<group>"; };
+		343D7087C62C7D07A5B6EF4F /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		368DB24B725B4211EE4F4E3A /* OrbitSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitSession.swift; sourceTree = "<group>"; };
 		4070A662D5849FC642AC0614 /* DomainPorts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainPorts.swift; sourceTree = "<group>"; };
 		42CBEB9080D77391040ECEDF /* CatalogAndScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogAndScan.swift; sourceTree = "<group>"; };
 		4723BA18C77014CEB8129F88 /* MealOrbitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealOrbitTests.swift; sourceTree = "<group>"; };
+		4B556F22F76C302E038D32EF /* ContactWebSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactWebSheet.swift; sourceTree = "<group>"; };
 		510D560069BA7822F655AD5E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
 		693741AD57E56D0A3326CB62 /* OrbitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitStore.swift; sourceTree = "<group>"; };
 		6F6FA0594EA272A567B0CB61 /* DossierAssignLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DossierAssignLaunch.swift; sourceTree = "<group>"; };
 		71C831C965BAD0072C2E6F5E /* MealOrbit.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MealOrbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D5A6CBADA372EA7D09DB218 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		91174BF10E2C82F3EABAE0A9 /* ScreenshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenshotTests.swift; sourceTree = "<group>"; };
 		97216DBC55FB2153D4E6BFF8 /* MealOrbitTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MealOrbitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A795A6016949CDFF9E2DD124 /* OrbitShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitShell.swift; sourceTree = "<group>"; };
 		A826CE76BAC7B7BCE653D34B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -62,10 +76,22 @@
 		D388E633DF18D5A32BB08B2A /* HorizonTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonTransferService.swift; sourceTree = "<group>"; };
 		D457034087191C9327D7D6C9 /* CommandDeckAndHorizon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDeckAndHorizon.swift; sourceTree = "<group>"; };
 		EB420514B5E1CB4D70E4F5C5 /* OrbitComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitComponents.swift; sourceTree = "<group>"; };
+		EB6CE7BC7D6E3AD6CE751FC2 /* MealOrbitUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MealOrbitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F2058C62331F75F749DEC60A /* OrbitPrimitives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitPrimitives.swift; sourceTree = "<group>"; };
 		F52EACBA155A029F3B5E5779 /* OrbitSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitSchema.swift; sourceTree = "<group>"; };
 		FB28E62DDB135EB25FDA453C /* OrbitDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitDesign.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		29E957E200B5D897C5E3DB07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA28491A3C0E14DFD2C68654 /* Alamofire in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		38FB6AB1FF0C5B83F74555A0 /* Infrastructure */ = {
@@ -91,6 +117,7 @@
 			children = (
 				D20A8BC0235E2A34B5496765 /* MealOrbit */,
 				D8DE12BE803F4D180E426FE7 /* MealOrbitTests */,
+				FEC3FBB5719E82740ECB2D82 /* MealOrbitUITests */,
 				CA71991319DD50380FB795AF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -157,6 +184,7 @@
 			children = (
 				71C831C965BAD0072C2E6F5E /* MealOrbit.app */,
 				97216DBC55FB2153D4E6BFF8 /* MealOrbitTests.xctest */,
+				EB6CE7BC7D6E3AD6CE751FC2 /* MealOrbitUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -164,7 +192,9 @@
 		D20A8BC0235E2A34B5496765 /* MealOrbit */ = {
 			isa = PBXGroup;
 			children = (
+				343D7087C62C7D07A5B6EF4F /* APIConfig.swift */,
 				A826CE76BAC7B7BCE653D34B /* Assets.xcassets */,
+				4B556F22F76C302E038D32EF /* ContactWebSheet.swift */,
 				B7BB2071DF378EA7BFAEB49F /* Info.plist */,
 				BFA12DF01DBB21ABD35D17C5 /* LaunchScreen.storyboard */,
 				7D5A6CBADA372EA7D09DB218 /* PrivacyInfo.xcprivacy */,
@@ -194,6 +224,14 @@
 			path = DomainServices;
 			sourceTree = "<group>";
 		};
+		FEC3FBB5719E82740ECB2D82 /* MealOrbitUITests */ = {
+			isa = PBXGroup;
+			children = (
+				91174BF10E2C82F3EABAE0A9 /* ScreenshotTests.swift */,
+			);
+			path = MealOrbitUITests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -221,6 +259,7 @@
 			buildPhases = (
 				1C800086795965155BBE09E6 /* Sources */,
 				9E075DC7D01C0D232A84AC34 /* Resources */,
+				29E957E200B5D897C5E3DB07 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -228,10 +267,29 @@
 			);
 			name = MealOrbit;
 			packageProductDependencies = (
+				46A3DC2D87A86190F00EA20B /* Alamofire */,
 			);
 			productName = MealOrbit;
 			productReference = 71C831C965BAD0072C2E6F5E /* MealOrbit.app */;
 			productType = "com.apple.product-type.application";
+		};
+		BE3501BB06BF16E4FB68CCBD /* MealOrbitUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 94AA09339DF1C5B1B20D46D4 /* Build configuration list for PBXNativeTarget "MealOrbitUITests" */;
+			buildPhases = (
+				1E44C52E7254900A83E67F35 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				93E6C2C14E9E7F19B05260C9 /* PBXTargetDependency */,
+			);
+			name = MealOrbitUITests;
+			packageProductDependencies = (
+			);
+			productName = MealOrbitUITests;
+			productReference = EB6CE7BC7D6E3AD6CE751FC2 /* MealOrbitUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -246,6 +304,9 @@
 						DevelopmentTeam = "";
 						ProvisioningStyle = Manual;
 					};
+					BE3501BB06BF16E4FB68CCBD = {
+						TestTargetID = 8DE4F8B222FF18E881C6A37F;
+					};
 				};
 			};
 			buildConfigurationList = 783E74B5B9D0EB47955CBF5A /* Build configuration list for PBXProject "MealOrbit" */;
@@ -257,6 +318,9 @@
 			);
 			mainGroup = 5F138EA5FBD758A0CA47E101;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				570B7521128BC780A3ACC365 /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CA71991319DD50380FB795AF /* Products */;
 			projectDirPath = "";
@@ -264,6 +328,7 @@
 			targets = (
 				8DE4F8B222FF18E881C6A37F /* MealOrbit */,
 				0CDC7B4AFACE73667D107EC1 /* MealOrbitTests */,
+				BE3501BB06BF16E4FB68CCBD /* MealOrbitUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -286,8 +351,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E9059535198FC7E0F8D9B1A /* APIConfig.swift in Sources */,
 				CF355A6807938709E67CF5B8 /* CatalogAndScan.swift in Sources */,
 				D29973127CA43EAC26FA7834 /* CommandDeckAndHorizon.swift in Sources */,
+				09CF1C01D68582BD89F59AAA /* ContactWebSheet.swift in Sources */,
 				EABA91ABC165F3DBA1B6E1F6 /* DemoShelf.swift in Sources */,
 				FADEE043755BF84D9A1684E6 /* DomainPorts.swift in Sources */,
 				B7098F5AC683BA47BFE0E25E /* DossierAssignLaunch.swift in Sources */,
@@ -306,6 +373,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		1E44C52E7254900A83E67F35 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC402FC86EC2C1D6D2397B84 /* ScreenshotTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		6EFC3D317515A2A7AC1F6886 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -317,6 +392,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		93E6C2C14E9E7F19B05260C9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DE4F8B222FF18E881C6A37F /* MealOrbit */;
+			targetProxy = 20B78D7A98636CE372467AE0 /* PBXContainerItemProxy */;
+		};
 		F932F26BE6FB77907813FD0A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 8DE4F8B222FF18E881C6A37F /* MealOrbit */;
@@ -325,6 +405,24 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		164ED26BE83FF991B7BBFC60 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mealorbit.orbit.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MealOrbit;
+			};
+			name = Debug;
+		};
 		1B87613F36FA7F94F8CE2902 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -344,10 +442,10 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "MealOrbit reads barcodes to lock a product into an orbit window.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -362,7 +460,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -428,7 +526,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -487,7 +585,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -510,6 +608,24 @@
 				SWIFT_VERSION = 6.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MealOrbit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MealOrbit";
+			};
+			name = Release;
+		};
+		85A7F5E7B2C4A6727735F9DE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mealorbit.orbit.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = MealOrbit;
 			};
 			name = Release;
 		};
@@ -554,10 +670,10 @@
 				INFOPLIST_KEY_NSCameraUsageDescription = "MealOrbit reads barcodes to lock a product into an orbit window.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIRequiresFullScreen = NO;
 				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -572,7 +688,7 @@
 				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_STRICT_CONCURRENCY = complete;
 				SWIFT_VERSION = 6.2;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -597,6 +713,15 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Debug;
 		};
+		94AA09339DF1C5B1B20D46D4 /* Build configuration list for PBXNativeTarget "MealOrbitUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				164ED26BE83FF991B7BBFC60 /* Debug */,
+				85A7F5E7B2C4A6727735F9DE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 		D8DD5CCBE7B5FAC94A812CF7 /* Build configuration list for PBXNativeTarget "MealOrbit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -607,6 +732,25 @@
 			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		570B7521128BC780A3ACC365 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/wrandecima-bit/Alamofire";
+			requirement = {
+				kind = revision;
+				revision = 7fdd403089757be2ce6991b287c7bef612c8bd04;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		46A3DC2D87A86190F00EA20B /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 570B7521128BC780A3ACC365 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C8FA55F0C08C4C96A838A6F9 /* Project object */;
 }
