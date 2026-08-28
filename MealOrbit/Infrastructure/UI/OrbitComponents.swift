@@ -72,6 +72,7 @@ struct OrbitEmptyState: View {
                 .resizable()
                 .scaledToFit()
                 .frame(width: 180, height: 180)
+                .clipped()
                 .accessibilityHidden(true)
             Text(title)
                 .font(OrbitType.title.font)
@@ -87,6 +88,7 @@ struct OrbitEmptyState: View {
                     .frame(minWidth: 160, minHeight: OrbitSpace.tap)
                     .foregroundStyle(OrbitPalette.color(.background))
                     .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                    .contentShape(Rectangle())
             }
             .accessibilityLabel(actionTitle)
         }
@@ -122,6 +124,7 @@ struct OrbitErrorState: View {
                     .frame(minWidth: 160, minHeight: OrbitSpace.tap)
                     .foregroundStyle(OrbitPalette.color(.background))
                     .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                    .contentShape(Rectangle())
             }
             .accessibilityLabel(retryTitle)
         }
@@ -201,6 +204,7 @@ struct PasscodeLockView: View {
                 .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.background))
                 .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                .contentShape(Rectangle())
                 .accessibilityLabel("Unlock")
             }
             .padding(OrbitSpace.inset)

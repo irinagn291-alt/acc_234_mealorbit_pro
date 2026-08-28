@@ -83,7 +83,8 @@ final class OrbitAppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
     ) -> Bool {
-        true
+        APIConfig.apply()
+        return true
     }
 
     func application(
@@ -100,7 +101,7 @@ final class OrbitAppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func application(_ application: UIApplication, supportedInterfaceOrientationsFor window: UIWindow?) -> UIInterfaceOrientationMask {
-        .portrait
+        UIDevice.current.userInterfaceIdiom == .pad ? .all : [.portrait, .landscapeLeft, .landscapeRight]
     }
 }
 
@@ -123,7 +124,11 @@ final class OrbitSceneDelegate: UIResponder, UIWindowSceneDelegate {
             passcode: composed.2
         )
         self.split = split
-        window.rootViewController = split
+        let gate = LaunchGateController(native: { split })
+        gate.installRoot = { [weak window] controller in
+            window?.rootViewController = controller
+        }
+        window.rootViewController = gate
         window.makeKeyAndVisible()
         self.window = window
         Task { await composed.0.bootstrap() }
@@ -146,6 +151,7 @@ final class OrbitSplitController: UISplitViewController, UISplitViewControllerDe
     private let storeFault: String?
     private let sidebarHost: UIHostingController<OrbitSidebarView>
     private let detailNav: UINavigationController
+    private let compactNav = UINavigationController()
     private var currentRoute: OrbitRoute = .commandDeck
     private var cancellables = Set<AnyCancellable>()
     private var didPresentLaunch = false
@@ -183,8 +189,11 @@ final class OrbitSplitController: UISplitViewController, UISplitViewControllerDe
         sidebarHost.view.backgroundColor = OrbitPalette.uiColor(.background)
         detailNav.navigationBar.prefersLargeTitles = false
         detailNav.navigationBar.tintColor = OrbitPalette.uiColor(.accent)
+        compactNav.navigationBar.prefersLargeTitles = false
+        compactNav.navigationBar.tintColor = OrbitPalette.uiColor(.accent)
         setViewController(sidebarHost, for: .primary)
         setViewController(detailNav, for: .secondary)
+        setViewController(compactNav, for: .compact)
         rebuildSidebar()
         if let raw = session.lastRouteRaw, let route = OrbitRoute(rawValue: raw) {
             showRoute(route)
@@ -226,20 +235,11 @@ final class OrbitSplitController: UISplitViewController, UISplitViewControllerDe
         currentRoute = route
         session.rememberRoute(route.rawValue)
         applyHorizonChrome(route == .horizon)
-        let controller = makeDetailController(for: route)
-        controller.navigationItem.largeTitleDisplayMode = .never
-        controller.navigationItem.title = route.title
-        if route == .horizon {
-            controller.navigationItem.leftBarButtonItem = UIBarButtonItem(
-                title: "Deck",
-                style: .plain,
-                target: self,
-                action: #selector(returnToDeck)
-            )
-        }
-        let animated = !UIAccessibility.isReduceMotionEnabled
-        detailNav.setViewControllers([controller], animated: animated)
-        show(.secondary)
+        let regular = makeDetailController(for: route)
+        let compact = makeDetailController(for: route)
+        applyRouteChrome(regular, route: route)
+        applyRouteChrome(compact, route: route)
+        replaceColumns(regular: regular, compact: compact)
         rebuildSidebar()
     }
 
@@ -258,8 +258,9 @@ final class OrbitSplitController: UISplitViewController, UISplitViewControllerDe
                 }
             }
         )
-        let host = hosted(view, title: "Payload Dossier")
-        replaceDetail(with: host)
+        replaceDetail {
+            hosted(view, title: "Payload Dossier")
+        }
     }
 
     func showAssign(payload: OrbitPayload, grams: Double) {
@@ -280,28 +281,80 @@ final class OrbitSplitController: UISplitViewController, UISplitViewControllerDe
                 }
             }
         )
-        let host = hosted(view, title: "Lock Window")
-        replaceDetail(with: host)
+        replaceDetail {
+            hosted(view, title: "Lock Window")
+        }
     }
 
     @objc private func returnToDeck() {
         showRoute(.commandDeck)
     }
 
+    @objc private func presentSidebar() {
+        let presenter = sidebarPresenter
+        if presenter.presentedViewController != nil {
+            presenter.dismiss(animated: true)
+            return
+        }
+        let sheet = UIHostingController(rootView: sidebarHost.rootView)
+        sheet.modalPresentationStyle = .formSheet
+        presenter.present(sheet, animated: !UIAccessibility.isReduceMotionEnabled)
+    }
+
     private func applyHorizonChrome(_ fullWidth: Bool) {
-        if fullWidth {
-            hide(.primary)
-            preferredDisplayMode = .secondaryOnly
+        _ = fullWidth
+    }
+
+    private var sidebarPresenter: UIViewController {
+        traitCollection.horizontalSizeClass == .regular ? detailNav : compactNav
+    }
+
+    private func applyRouteChrome(_ controller: UIViewController, route: OrbitRoute) {
+        controller.navigationItem.largeTitleDisplayMode = .never
+        controller.navigationItem.title = route.title
+        if route == .horizon {
+            controller.navigationItem.leftBarButtonItem = OrbitHit.titleBarItem(
+                "Deck",
+                target: self,
+                action: #selector(returnToDeck)
+            )
         } else {
-            show(.primary)
-            preferredDisplayMode = .oneBesideSecondary
+            controller.navigationItem.leftBarButtonItem = OrbitHit.titleBarItem(
+                "Show Sidebar",
+                target: self,
+                action: #selector(presentSidebar)
+            )
         }
     }
 
-    private func replaceDetail(with controller: UIViewController) {
+    private func replaceDetail(with make: () -> UIViewController) {
+        let regular = make()
+        let compact = make()
+        applySidebarButton(regular)
+        applySidebarButton(compact)
+        replaceColumns(regular: regular, compact: compact)
+    }
+
+    private func applySidebarButton(_ controller: UIViewController) {
+        if controller.navigationItem.leftBarButtonItem == nil {
+            controller.navigationItem.leftBarButtonItem = OrbitHit.titleBarItem(
+                "Show Sidebar",
+                target: self,
+                action: #selector(presentSidebar)
+            )
+        }
+    }
+
+    private func replaceColumns(regular: UIViewController, compact: UIViewController) {
         let animated = !UIAccessibility.isReduceMotionEnabled
-        detailNav.setViewControllers([controller], animated: animated)
-        show(.secondary)
+        detailNav.setViewControllers([regular], animated: animated)
+        compactNav.setViewControllers([compact], animated: animated)
+        if detailNav.presentedViewController != nil {
+            detailNav.dismiss(animated: animated)
+        }
+        if compactNav.presentedViewController != nil {
+            compactNav.dismiss(animated: animated)
+        }
     }
 
     private func makeDetailController(for route: OrbitRoute) -> UIViewController {
@@ -495,6 +548,7 @@ struct OrbitSidebarView: View {
                             }
                         }
                         .frame(minHeight: OrbitSpace.tap)
+                        .contentShape(Rectangle())
                     }
                     .listRowBackground(
                         RoundedRectangle(cornerRadius: OrbitSpace.radius)

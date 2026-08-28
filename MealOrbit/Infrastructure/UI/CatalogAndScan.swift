@@ -1,6 +1,7 @@
 import Combine
 import SwiftUI
 import UIKit
+import Vision
 import VisionKit
 import AVFoundation
 
@@ -34,7 +35,7 @@ struct CatalogSweepView: View {
         }
         .background(TextureBackdrop())
         .scrollDismissesKeyboard(.interactively)
-        .onTapGesture { searchFocused = false }
+        .simultaneousGesture(TapGesture().onEnded { searchFocused = false })
     }
 
     @ViewBuilder
@@ -105,6 +106,7 @@ struct CatalogSweepView: View {
                                 .lineLimit(1)
                         }
                         .frame(minHeight: OrbitSpace.tap)
+                        .contentShape(Rectangle())
                     }
                     .listRowBackground(OrbitPalette.color(.surface))
                     .accessibilityLabel("\(payload.name), \(kcalLabel(payload))")
@@ -252,10 +254,10 @@ final class TelemetryScanController: UIViewController, DataScannerViewController
         guard status == .authorized else { return }
         stopScanner()
         let scanner = DataScannerViewController(
-            recognizedDataTypes: [.barcode()],
+            recognizedDataTypes: [.barcode(symbologies: [.ean8, .ean13, .upce, .qr])],
             qualityLevel: .balanced,
-            recognizesMultipleItems: true,
-            isHighFrameRateTrackingEnabled: false,
+            recognizesMultipleItems: false,
+            isHighFrameRateTrackingEnabled: true,
             isPinchToZoomEnabled: true,
             isGuidanceEnabled: true,
             isHighlightingEnabled: true
@@ -319,6 +321,12 @@ final class TelemetryScanController: UIViewController, DataScannerViewController
 
     func dataScanner(_ dataScanner: DataScannerViewController, didAdd addedItems: [RecognizedItem], allItems: [RecognizedItem]) {
         publish(allItems)
+        for item in addedItems {
+            if case .barcode(let barcode) = item, let value = barcode.payloadStringValue, !value.isEmpty {
+                accept(value)
+                return
+            }
+        }
     }
 
     func dataScanner(_ dataScanner: DataScannerViewController, didUpdate updatedItems: [RecognizedItem], allItems: [RecognizedItem]) {
@@ -429,6 +437,7 @@ struct ScanChromeView: View {
                 .frame(minWidth: 64, minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.background))
                 .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                .contentShape(Rectangle())
                 .disabled(manual.trimmingCharacters(in: .whitespaces).isEmpty || session.isResolving)
                 .accessibilityLabel("Lock typed barcode")
             }
@@ -449,6 +458,7 @@ struct ScanChromeView: View {
                 .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.background))
                 .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                .contentShape(Rectangle())
                 .accessibilityLabel("Enable camera telemetry")
         case .denied:
             permissionCallout(
@@ -478,6 +488,7 @@ struct ScanChromeView: View {
                 .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.background))
                 .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                .contentShape(Rectangle())
                 .accessibilityLabel("Open Settings")
         }
     }
@@ -496,6 +507,7 @@ struct ScanChromeView: View {
                 .font(OrbitType.body.font)
                 .frame(minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.accent))
+                .contentShape(Rectangle())
                 .disabled(manual.trimmingCharacters(in: .whitespaces).isEmpty || session.isResolving)
                 .accessibilityLabel("Retry lock")
             }
@@ -522,9 +534,11 @@ struct ScanChromeView: View {
                     .frame(minHeight: OrbitSpace.tap)
                     .foregroundStyle(OrbitPalette.color(.ink))
                     .background(OrbitPalette.color(.surface), in: Capsule())
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Sample \(payload.name)")
                 }
             }
+            .padding(.trailing, OrbitSpace.inset)
         }
     }
 }

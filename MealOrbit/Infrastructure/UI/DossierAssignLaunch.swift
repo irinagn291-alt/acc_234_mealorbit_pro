@@ -48,7 +48,7 @@ struct PayloadDossierView: View {
             .padding(OrbitSpace.inset)
         }
         .scrollDismissesKeyboard(.interactively)
-        .onTapGesture { gramsFocused = false }
+        .simultaneousGesture(TapGesture().onEnded { gramsFocused = false })
         .background(TextureBackdrop())
         .overlay {
             if showSuccess {
@@ -161,6 +161,7 @@ struct PayloadDossierView: View {
                 }
                 .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                 .background(OrbitPalette.color(.accent).opacity(0.2), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                .contentShape(Rectangle())
             }
             .disabled(!gramsOK || payload.mass.kcal100 == nil || session.isMutating)
             .accessibilityLabel("Lock into a window")
@@ -177,6 +178,7 @@ struct PayloadDossierView: View {
                     .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                     .foregroundStyle(OrbitPalette.color(.ink))
                     .background(OrbitPalette.color(.surface), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                    .contentShape(Rectangle())
             }
             .disabled(session.isWished(payload.barcode) || session.isMutating)
             .accessibilityLabel(session.isWished(payload.barcode) ? "Already on acquisition list" : "Park on acquisition list")
@@ -250,6 +252,7 @@ struct WindowAssignView: View {
                         .frame(minHeight: OrbitSpace.tap)
                         .padding(.horizontal, OrbitSpace.unit)
                         .background(OrbitPalette.color(.surface), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                        .contentShape(Rectangle())
                     }
                     .disabled(disabled)
                     .accessibilityLabel(item.displayName)
@@ -301,12 +304,14 @@ struct WindowAssignView: View {
                 .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.background))
                 .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                .contentShape(Rectangle())
                 .disabled(session.isMutating)
                 .accessibilityLabel("Confirm lock")
                 Button("Back to dossier", action: onCancel)
                     .font(OrbitType.body.font)
                     .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                     .foregroundStyle(OrbitPalette.color(.ink))
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Back to dossier")
             }
             .padding(OrbitSpace.inset)
@@ -354,7 +359,16 @@ struct LaunchSequenceView: View {
                     ).tag(2)
                     targetsPage.tag(3)
                 }
-                .tabViewStyle(.page(indexDisplayMode: .always))
+                .tabViewStyle(.page(indexDisplayMode: .never))
+                HStack(spacing: 8) {
+                    ForEach(0..<4, id: \.self) { index in
+                        Circle()
+                            .fill(index == page ? OrbitPalette.color(.ink) : OrbitPalette.color(.muted).opacity(0.45))
+                            .frame(width: 8, height: 8)
+                            .accessibilityHidden(true)
+                    }
+                }
+                .accessibilityHidden(true)
                 HStack {
                     Button("Skip with defaults") {
                         onFinish(.sensibleDefaults)
@@ -362,6 +376,7 @@ struct LaunchSequenceView: View {
                     .font(OrbitType.body.font)
                     .frame(minHeight: OrbitSpace.tap)
                     .foregroundStyle(OrbitPalette.color(.muted))
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Skip with defaults")
                     Spacer()
                     Button(page == 3 ? "Write targets" : "Next") {
@@ -375,6 +390,7 @@ struct LaunchSequenceView: View {
                     .frame(minWidth: 120, minHeight: OrbitSpace.tap)
                     .foregroundStyle(OrbitPalette.color(.background))
                     .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                    .contentShape(Rectangle())
                     .disabled(page == 3 && !targetsOK)
                     .accessibilityLabel(page == 3 ? "Write targets" : "Next")
                 }
@@ -389,6 +405,7 @@ struct LaunchSequenceView: View {
             Image(image)
                 .resizable()
                 .scaledToFit()
+                .frame(maxHeight: 260)
                 .clipShape(RoundedRectangle(cornerRadius: OrbitSpace.radius))
                 .accessibilityHidden(true)
             Text(title)
@@ -400,6 +417,7 @@ struct LaunchSequenceView: View {
                 .foregroundStyle(OrbitPalette.color(.muted))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, OrbitSpace.inset)
+            Spacer(minLength: 12)
         }
         .padding(OrbitSpace.inset)
     }

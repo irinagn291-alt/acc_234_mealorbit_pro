@@ -85,6 +85,25 @@ enum OrbitSpace {
     static let tap: CGFloat = 44
 }
 
+@MainActor
+enum OrbitHit {
+    static func titleBarItem(_ title: String, target: AnyObject, action: Selector) -> UIBarButtonItem {
+        let button = UIButton(type: .system)
+        button.setTitle(title, for: .normal)
+        button.contentEdgeInsets = UIEdgeInsets(top: 10, left: 12, bottom: 10, right: 12)
+        button.addAction(UIAction { [weak target] _ in
+            _ = target?.perform(action)
+        }, for: .touchUpInside)
+        button.sizeToFit()
+        var frame = button.frame
+        frame.size.height = max(frame.height, OrbitSpace.tap)
+        frame.size.width = max(frame.width, OrbitSpace.tap)
+        button.frame = frame
+        button.accessibilityLabel = title
+        return UIBarButtonItem(customView: button)
+    }
+}
+
 enum OrbitMotion {
     static let duration: Double = 0.28
 

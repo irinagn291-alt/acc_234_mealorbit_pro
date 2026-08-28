@@ -41,6 +41,7 @@ struct CommandDeckView: View {
                         .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                         .foregroundStyle(OrbitPalette.color(.ink))
                         .background(OrbitPalette.color(.surface), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                        .contentShape(Rectangle())
                 }
                 .accessibilityLabel("Open burn log")
             }
@@ -174,6 +175,7 @@ struct CommandDeckView: View {
                                                 .layoutPriority(1)
                                         }
                                         .frame(minHeight: OrbitSpace.tap)
+                                        .contentShape(Rectangle())
                                     }
                                     .accessibilityLabel("\(entry.payload.name), \(OrbitFigures.energy(TelemetryService.portion(mass: entry.payload.mass, grams: entry.grams).kcal100)) kilocalories")
                                 }
@@ -215,6 +217,7 @@ struct CommandDeckView: View {
                                 .padding(.horizontal, OrbitSpace.unit)
                                 .foregroundStyle(OrbitPalette.color(.background))
                                 .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                                .contentShape(Rectangle())
                                 .disabled(session.isMutating)
                                 .accessibilityLabel("Lock \(entry.payload.name) as eaten")
                             }
@@ -257,6 +260,7 @@ struct CommandDeckView: View {
                     }
                 }
                 .frame(minHeight: OrbitSpace.tap)
+                .contentShape(Rectangle())
             }
         }
         .accessibilityLabel("Open fourteen-day horizon")
@@ -269,6 +273,7 @@ struct CommandDeckView: View {
                 .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.background))
                 .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                .contentShape(Rectangle())
         }
         .accessibilityLabel(title)
     }
@@ -370,11 +375,13 @@ struct HorizonGridView: View {
                                 OrbitHaptics.commit()
                             }
                         }
+                        .buttonStyle(.borderless)
                         .font(OrbitType.micro.font)
                         .frame(minHeight: OrbitSpace.tap)
                         .padding(.horizontal, OrbitSpace.unit)
                         .foregroundStyle(OrbitPalette.color(.background))
                         .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                        .contentShape(Rectangle())
                         .accessibilityLabel("Lock \(entry.payload.name) as eaten")
                     }
                 }

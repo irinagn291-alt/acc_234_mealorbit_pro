@@ -19,6 +19,7 @@ struct BurnLogView: View {
                 } label: {
                     Image(systemName: "chevron.left")
                         .frame(width: OrbitSpace.tap, height: OrbitSpace.tap)
+                        .contentShape(Rectangle())
                 }
                 .accessibilityLabel("Previous day")
                 Spacer()
@@ -31,6 +32,7 @@ struct BurnLogView: View {
                 } label: {
                     Image(systemName: "chevron.right")
                         .frame(width: OrbitSpace.tap, height: OrbitSpace.tap)
+                        .contentShape(Rectangle())
                 }
                 .accessibilityLabel("Next day")
             }
@@ -77,13 +79,12 @@ struct BurnLogView: View {
             }
         }
         .background(TextureBackdrop())
-        .confirmationDialog(
+        .alert(
             "Delete this payload from the burn log?",
             isPresented: Binding(
                 get: { pendingDelete != nil },
                 set: { if !$0 { pendingDelete = nil } }
-            ),
-            titleVisibility: .visible
+            )
         ) {
             Button("Delete", role: .destructive) {
                 if let pendingDelete {
@@ -176,7 +177,9 @@ struct AcquisitionListView: View {
                                         .foregroundStyle(OrbitPalette.color(.accent))
                                 }
                                 .frame(minHeight: OrbitSpace.tap)
+                                .contentShape(Rectangle())
                             }
+                            .buttonStyle(.plain)
                             .accessibilityLabel("Promote \(chip.payload.name)")
                         }
                         .listRowBackground(OrbitPalette.color(.surface))
@@ -192,10 +195,9 @@ struct AcquisitionListView: View {
             }
         }
         .background(TextureBackdrop())
-        .confirmationDialog(
+        .alert(
             "Remove this payload from the acquisition list?",
-            isPresented: Binding(get: { pending != nil }, set: { if !$0 { pending = nil } }),
-            titleVisibility: .visible
+            isPresented: Binding(get: { pending != nil }, set: { if !$0 { pending = nil } })
         ) {
             Button("Delete", role: .destructive) {
                 if let pending {
@@ -222,6 +224,7 @@ struct MassTargetsView: View {
     @State private var passcodeDraft = ""
     @State private var confirmReset = false
     @State private var savedFlash = false
+    @State private var showContact = false
 
     var body: some View {
         ScrollView {
@@ -250,6 +253,7 @@ struct MassTargetsView: View {
                 .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.background))
                 .background(OrbitPalette.color(.accent), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                .contentShape(Rectangle())
                 .disabled(!targetsOK || session.isMutating)
                 .accessibilityLabel("Save targets")
                 if savedFlash {
@@ -279,12 +283,14 @@ struct MassTargetsView: View {
                 .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.ink))
                 .background(OrbitPalette.color(.surface), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                .contentShape(Rectangle())
                 .accessibilityLabel("Store passcode")
                 Button("Re-run launch sequence", action: onRerunLaunch)
                     .font(OrbitType.body.font)
                     .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                     .foregroundStyle(OrbitPalette.color(.ink))
                     .background(OrbitPalette.color(.surface), in: RoundedRectangle(cornerRadius: OrbitSpace.radius))
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Re-run launch sequence")
                 Button("Reset all data") {
                     confirmReset = true
@@ -292,11 +298,13 @@ struct MassTargetsView: View {
                 .font(OrbitType.body.font)
                 .frame(maxWidth: .infinity, minHeight: OrbitSpace.tap)
                 .foregroundStyle(OrbitPalette.color(.muted))
+                .contentShape(Rectangle())
                 .accessibilityLabel("Reset all data")
-                Link("Contact MealOrbit", destination: URL(string: "https://mealorbit.pro/contact-us") ?? URL(fileURLWithPath: "/"))
+                Button("Contact MealOrbit") { showContact = true }
                     .font(OrbitType.body.font)
                     .foregroundStyle(OrbitPalette.color(.accent))
                     .frame(minHeight: OrbitSpace.tap)
+                    .contentShape(Rectangle())
                     .accessibilityLabel("Contact MealOrbit")
                 Text("MealOrbit is a personal food log, not medical advice. Nutrition data is credited to Open Food Facts, a public database.")
                     .font(OrbitType.caption.font)
@@ -305,6 +313,9 @@ struct MassTargetsView: View {
             .padding(OrbitSpace.inset)
         }
         .scrollDismissesKeyboard(.interactively)
+        .sheet(isPresented: $showContact) {
+            ContactWebSheet()
+        }
         .background(TextureBackdrop())
         .onAppear {
             kcal = OrbitFigures.kcal(session.targets.kcal)

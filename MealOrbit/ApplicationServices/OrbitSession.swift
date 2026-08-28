@@ -361,7 +361,11 @@ final class OrbitSession: ObservableObject {
 
     private func seedDemoDayIfNeeded() async throws {
         #if targetEnvironment(simulator)
-        guard !flags.didSeedDemoDay else { return }
+        let existing = try await logs.entries(dayKey: todayKey)
+        if !existing.isEmpty {
+            flags.didSeedDemoDay = true
+            return
+        }
         flags.didSeedDemoDay = true
         let eggs = DemoShelf.payloads[0]
         let mince = DemoShelf.payloads[1]
@@ -400,6 +404,9 @@ final class OrbitSession: ObservableObject {
                 createdAt: Date()
             )
         )
+        if wishes.isEmpty {
+            try await addWish(DemoShelf.payloads[2])
+        }
         #endif
     }
 }

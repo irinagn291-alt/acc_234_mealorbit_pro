@@ -35,6 +35,20 @@
                ReferencedContainer = "container:MealOrbit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BE3501BB06BF16E4FB68CCBD"
+               BuildableName = "MealOrbitUITests.xctest"
+               BlueprintName = "MealOrbitUITests"
+               ReferencedContainer = "container:MealOrbit.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -61,6 +75,17 @@
                BlueprintIdentifier = "0CDC7B4AFACE73667D107EC1"
                BuildableName = "MealOrbitTests.xctest"
                BlueprintName = "MealOrbitTests"
+               ReferencedContainer = "container:MealOrbit.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "BE3501BB06BF16E4FB68CCBD"
+               BuildableName = "MealOrbitUITests.xctest"
+               BlueprintName = "MealOrbitUITests"
                ReferencedContainer = "container:MealOrbit.xcodeproj">
             </BuildableReference>
          </TestableReference>
