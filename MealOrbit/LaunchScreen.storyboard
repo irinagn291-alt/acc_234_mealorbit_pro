@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Launch">
+    <device id="retina6_7" orientation="portrait" appearance="dark"/>
+    <scenes>
+        <scene sceneID="s1">
+            <objects>
+                <viewController id="Launch" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Root">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mlo_Splash" translatesAutoresizingMaskIntoConstraints="NO" id="Splash">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Safe"/>
+                        <color key="backgroundColor" name="mlo_background"/>
+                        <constraints>
+                            <constraint firstItem="Splash" firstAttribute="top" secondItem="Root" secondAttribute="top" id="c1"/>
+                            <constraint firstItem="Splash" firstAttribute="bottom" secondItem="Root" secondAttribute="bottom" id="c2"/>
+                            <constraint firstItem="Splash" firstAttribute="leading" secondItem="Root" secondAttribute="leading" id="c3"/>
+                            <constraint firstItem="Splash" firstAttribute="trailing" secondItem="Root" secondAttribute="trailing" id="c4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="First" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="53" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="mlo_Splash" width="1290" height="2796"/>
+        <namedColor name="mlo_background">
+            <color red="0.019999999552965164" green="0.030999999493360519" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,612 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1D415A8C95394C6016E7C2A6 /* OrbitSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 368DB24B725B4211EE4F4E3A /* OrbitSession.swift */; };
+		202DB6936488B0A87082EBB4 /* MealOrbitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4723BA18C77014CEB8129F88 /* MealOrbitTests.swift */; };
+		31BA679765B97FEBECD8CC43 /* Keychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 510D560069BA7822F655AD5E /* Keychain.swift */; };
+		4897F574F86C33AD412B64B5 /* OrbitPrimitives.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2058C62331F75F749DEC60A /* OrbitPrimitives.swift */; };
+		5F1F2CCE97C11472E680CC05 /* OrbitSchema.swift in Sources */ = {isa = PBXBuildFile; fileRef = F52EACBA155A029F3B5E5779 /* OrbitSchema.swift */; };
+		5FD3835B0BB621F9A93A56AD /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 7D5A6CBADA372EA7D09DB218 /* PrivacyInfo.xcprivacy */; };
+		6B1830AE27C4A02595158871 /* TelemetryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5C2BD38B9468BA52862B74 /* TelemetryService.swift */; };
+		6CCCB7149834A33A0B95428C /* OrbitShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A795A6016949CDFF9E2DD124 /* OrbitShell.swift */; };
+		80108CB0409F6A20B12F085E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFA12DF01DBB21ABD35D17C5 /* LaunchScreen.storyboard */; };
+		80F60CF0E7C3542EBC830FAF /* OrbitDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB28E62DDB135EB25FDA453C /* OrbitDesign.swift */; };
+		81C621BB8EF95BCB8D53AF23 /* OpenFoodFactsClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 083FECD96698614B1797E7D1 /* OpenFoodFactsClient.swift */; };
+		935A53566F846F49DFEC137A /* HorizonTransferService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D388E633DF18D5A32BB08B2A /* HorizonTransferService.swift */; };
+		96A7E4E0B3A1CA5373055BF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A826CE76BAC7B7BCE653D34B /* Assets.xcassets */; };
+		A2081480E528987D5E480BF3 /* LogWishGoals.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA952A9C5FA525F86A1FEB06 /* LogWishGoals.swift */; };
+		B7098F5AC683BA47BFE0E25E /* DossierAssignLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6FA0594EA272A567B0CB61 /* DossierAssignLaunch.swift */; };
+		C658117D058FE35E7D7F1B87 /* OrbitComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB420514B5E1CB4D70E4F5C5 /* OrbitComponents.swift */; };
+		CF355A6807938709E67CF5B8 /* CatalogAndScan.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42CBEB9080D77391040ECEDF /* CatalogAndScan.swift */; };
+		D29973127CA43EAC26FA7834 /* CommandDeckAndHorizon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D457034087191C9327D7D6C9 /* CommandDeckAndHorizon.swift */; };
+		DE1906391F2478ADE1866C15 /* OrbitStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693741AD57E56D0A3326CB62 /* OrbitStore.swift */; };
+		EABA91ABC165F3DBA1B6E1F6 /* DemoShelf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15A14D187F8954C73A0FE8FB /* DemoShelf.swift */; };
+		FADEE043755BF84D9A1684E6 /* DomainPorts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4070A662D5849FC642AC0614 /* DomainPorts.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9DF449E4AFA2A22CE42F5530 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C8FA55F0C08C4C96A838A6F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8DE4F8B222FF18E881C6A37F;
+			remoteInfo = MealOrbit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		083FECD96698614B1797E7D1 /* OpenFoodFactsClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenFoodFactsClient.swift; sourceTree = "<group>"; };
+		0D5C2BD38B9468BA52862B74 /* TelemetryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TelemetryService.swift; sourceTree = "<group>"; };
+		15A14D187F8954C73A0FE8FB /* DemoShelf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoShelf.swift; sourceTree = "<group>"; };
+		368DB24B725B4211EE4F4E3A /* OrbitSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitSession.swift; sourceTree = "<group>"; };
+		4070A662D5849FC642AC0614 /* DomainPorts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainPorts.swift; sourceTree = "<group>"; };
+		42CBEB9080D77391040ECEDF /* CatalogAndScan.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogAndScan.swift; sourceTree = "<group>"; };
+		4723BA18C77014CEB8129F88 /* MealOrbitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealOrbitTests.swift; sourceTree = "<group>"; };
+		510D560069BA7822F655AD5E /* Keychain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keychain.swift; sourceTree = "<group>"; };
+		693741AD57E56D0A3326CB62 /* OrbitStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitStore.swift; sourceTree = "<group>"; };
+		6F6FA0594EA272A567B0CB61 /* DossierAssignLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DossierAssignLaunch.swift; sourceTree = "<group>"; };
+		71C831C965BAD0072C2E6F5E /* MealOrbit.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = MealOrbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D5A6CBADA372EA7D09DB218 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		97216DBC55FB2153D4E6BFF8 /* MealOrbitTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = MealOrbitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A795A6016949CDFF9E2DD124 /* OrbitShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitShell.swift; sourceTree = "<group>"; };
+		A826CE76BAC7B7BCE653D34B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7BB2071DF378EA7BFAEB49F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		BA952A9C5FA525F86A1FEB06 /* LogWishGoals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogWishGoals.swift; sourceTree = "<group>"; };
+		BFA12DF01DBB21ABD35D17C5 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D388E633DF18D5A32BB08B2A /* HorizonTransferService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HorizonTransferService.swift; sourceTree = "<group>"; };
+		D457034087191C9327D7D6C9 /* CommandDeckAndHorizon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandDeckAndHorizon.swift; sourceTree = "<group>"; };
+		EB420514B5E1CB4D70E4F5C5 /* OrbitComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitComponents.swift; sourceTree = "<group>"; };
+		F2058C62331F75F749DEC60A /* OrbitPrimitives.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitPrimitives.swift; sourceTree = "<group>"; };
+		F52EACBA155A029F3B5E5779 /* OrbitSchema.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitSchema.swift; sourceTree = "<group>"; };
+		FB28E62DDB135EB25FDA453C /* OrbitDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrbitDesign.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		38FB6AB1FF0C5B83F74555A0 /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				C1B69769E6ED21ABA0714B5E /* Network */,
+				AD352A37695BE4ABC44421B7 /* Persistence */,
+				AEE74E546483A5A33178B199 /* UI */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		4CBCC63118DC5FC90E055571 /* KeychainAccess */ = {
+			isa = PBXGroup;
+			children = (
+				510D560069BA7822F655AD5E /* Keychain.swift */,
+			);
+			path = KeychainAccess;
+			sourceTree = "<group>";
+		};
+		5F138EA5FBD758A0CA47E101 = {
+			isa = PBXGroup;
+			children = (
+				D20A8BC0235E2A34B5496765 /* MealOrbit */,
+				D8DE12BE803F4D180E426FE7 /* MealOrbitTests */,
+				CA71991319DD50380FB795AF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73846472651E8BCF3D6512E0 /* DomainModel */ = {
+			isa = PBXGroup;
+			children = (
+				4070A662D5849FC642AC0614 /* DomainPorts.swift */,
+				F2058C62331F75F749DEC60A /* OrbitPrimitives.swift */,
+			);
+			path = DomainModel;
+			sourceTree = "<group>";
+		};
+		78D51FF5D5BC25682581EBEA /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				4CBCC63118DC5FC90E055571 /* KeychainAccess */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		AD352A37695BE4ABC44421B7 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				F52EACBA155A029F3B5E5779 /* OrbitSchema.swift */,
+				693741AD57E56D0A3326CB62 /* OrbitStore.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		AEE74E546483A5A33178B199 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				42CBEB9080D77391040ECEDF /* CatalogAndScan.swift */,
+				D457034087191C9327D7D6C9 /* CommandDeckAndHorizon.swift */,
+				6F6FA0594EA272A567B0CB61 /* DossierAssignLaunch.swift */,
+				BA952A9C5FA525F86A1FEB06 /* LogWishGoals.swift */,
+				EB420514B5E1CB4D70E4F5C5 /* OrbitComponents.swift */,
+				FB28E62DDB135EB25FDA453C /* OrbitDesign.swift */,
+				A795A6016949CDFF9E2DD124 /* OrbitShell.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		B79D3F0F60C33A8993AA9EFA /* ApplicationServices */ = {
+			isa = PBXGroup;
+			children = (
+				15A14D187F8954C73A0FE8FB /* DemoShelf.swift */,
+				368DB24B725B4211EE4F4E3A /* OrbitSession.swift */,
+			);
+			path = ApplicationServices;
+			sourceTree = "<group>";
+		};
+		C1B69769E6ED21ABA0714B5E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				083FECD96698614B1797E7D1 /* OpenFoodFactsClient.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		CA71991319DD50380FB795AF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				71C831C965BAD0072C2E6F5E /* MealOrbit.app */,
+				97216DBC55FB2153D4E6BFF8 /* MealOrbitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D20A8BC0235E2A34B5496765 /* MealOrbit */ = {
+			isa = PBXGroup;
+			children = (
+				A826CE76BAC7B7BCE653D34B /* Assets.xcassets */,
+				B7BB2071DF378EA7BFAEB49F /* Info.plist */,
+				BFA12DF01DBB21ABD35D17C5 /* LaunchScreen.storyboard */,
+				7D5A6CBADA372EA7D09DB218 /* PrivacyInfo.xcprivacy */,
+				B79D3F0F60C33A8993AA9EFA /* ApplicationServices */,
+				73846472651E8BCF3D6512E0 /* DomainModel */,
+				DBB3B47BF45B25B88B495BB9 /* DomainServices */,
+				38FB6AB1FF0C5B83F74555A0 /* Infrastructure */,
+				78D51FF5D5BC25682581EBEA /* Vendor */,
+			);
+			path = MealOrbit;
+			sourceTree = "<group>";
+		};
+		D8DE12BE803F4D180E426FE7 /* MealOrbitTests */ = {
+			isa = PBXGroup;
+			children = (
+				4723BA18C77014CEB8129F88 /* MealOrbitTests.swift */,
+			);
+			path = MealOrbitTests;
+			sourceTree = "<group>";
+		};
+		DBB3B47BF45B25B88B495BB9 /* DomainServices */ = {
+			isa = PBXGroup;
+			children = (
+				D388E633DF18D5A32BB08B2A /* HorizonTransferService.swift */,
+				0D5C2BD38B9468BA52862B74 /* TelemetryService.swift */,
+			);
+			path = DomainServices;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		0CDC7B4AFACE73667D107EC1 /* MealOrbitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DF1E1B816EB42FA01A2EDE3 /* Build configuration list for PBXNativeTarget "MealOrbitTests" */;
+			buildPhases = (
+				6EFC3D317515A2A7AC1F6886 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F932F26BE6FB77907813FD0A /* PBXTargetDependency */,
+			);
+			name = MealOrbitTests;
+			packageProductDependencies = (
+			);
+			productName = MealOrbitTests;
+			productReference = 97216DBC55FB2153D4E6BFF8 /* MealOrbitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8DE4F8B222FF18E881C6A37F /* MealOrbit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8DD5CCBE7B5FAC94A812CF7 /* Build configuration list for PBXNativeTarget "MealOrbit" */;
+			buildPhases = (
+				1C800086795965155BBE09E6 /* Sources */,
+				9E075DC7D01C0D232A84AC34 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MealOrbit;
+			packageProductDependencies = (
+			);
+			productName = MealOrbit;
+			productReference = 71C831C965BAD0072C2E6F5E /* MealOrbit.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8FA55F0C08C4C96A838A6F9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					8DE4F8B222FF18E881C6A37F = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = 783E74B5B9D0EB47955CBF5A /* Build configuration list for PBXProject "MealOrbit" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 5F138EA5FBD758A0CA47E101;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = CA71991319DD50380FB795AF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8DE4F8B222FF18E881C6A37F /* MealOrbit */,
+				0CDC7B4AFACE73667D107EC1 /* MealOrbitTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9E075DC7D01C0D232A84AC34 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96A7E4E0B3A1CA5373055BF1 /* Assets.xcassets in Resources */,
+				80108CB0409F6A20B12F085E /* LaunchScreen.storyboard in Resources */,
+				5FD3835B0BB621F9A93A56AD /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1C800086795965155BBE09E6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF355A6807938709E67CF5B8 /* CatalogAndScan.swift in Sources */,
+				D29973127CA43EAC26FA7834 /* CommandDeckAndHorizon.swift in Sources */,
+				EABA91ABC165F3DBA1B6E1F6 /* DemoShelf.swift in Sources */,
+				FADEE043755BF84D9A1684E6 /* DomainPorts.swift in Sources */,
+				B7098F5AC683BA47BFE0E25E /* DossierAssignLaunch.swift in Sources */,
+				935A53566F846F49DFEC137A /* HorizonTransferService.swift in Sources */,
+				31BA679765B97FEBECD8CC43 /* Keychain.swift in Sources */,
+				A2081480E528987D5E480BF3 /* LogWishGoals.swift in Sources */,
+				81C621BB8EF95BCB8D53AF23 /* OpenFoodFactsClient.swift in Sources */,
+				C658117D058FE35E7D7F1B87 /* OrbitComponents.swift in Sources */,
+				80F60CF0E7C3542EBC830FAF /* OrbitDesign.swift in Sources */,
+				4897F574F86C33AD412B64B5 /* OrbitPrimitives.swift in Sources */,
+				5F1F2CCE97C11472E680CC05 /* OrbitSchema.swift in Sources */,
+				1D415A8C95394C6016E7C2A6 /* OrbitSession.swift in Sources */,
+				6CCCB7149834A33A0B95428C /* OrbitShell.swift in Sources */,
+				DE1906391F2478ADE1866C15 /* OrbitStore.swift in Sources */,
+				6B1830AE27C4A02595158871 /* TelemetryService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6EFC3D317515A2A7AC1F6886 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				202DB6936488B0A87082EBB4 /* MealOrbitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F932F26BE6FB77907813FD0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8DE4F8B222FF18E881C6A37F /* MealOrbit */;
+			targetProxy = 9DF449E4AFA2A22CE42F5530 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1B87613F36FA7F94F8CE2902 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealOrbit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MealOrbit;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSCameraUsageDescription = "MealOrbit reads barcodes to lock a product into an orbit window.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mealorbit.orbit;
+				PRODUCT_NAME = MealOrbit;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4125BF44423A1955F1DF9F78 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		57C27FE27DFB34FC199C6018 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		682EAF15B3F8ED3FEC7CDBEA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mealorbit.orbit.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MealOrbit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MealOrbit";
+			};
+			name = Release;
+		};
+		B6CC10E5548739D2C9E98BC8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGNING_ALLOWED = NO;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.mealorbit.orbit.tests;
+				SDKROOT = iphoneos;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MealOrbit.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/MealOrbit";
+			};
+			name = Debug;
+		};
+		C6AB09BB5F551B03E63EA3CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MealOrbit/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MealOrbit;
+				INFOPLIST_KEY_ITSAppUsesNonExemptEncryption = NO;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
+				INFOPLIST_KEY_NSCameraUsageDescription = "MealOrbit reads barcodes to lock a product into an orbit window.";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIRequiresFullScreen = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = UIStatusBarStyleLightContent;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Dark;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.mealorbit.orbit;
+				PRODUCT_NAME = MealOrbit;
+				SDKROOT = iphoneos;
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.2;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DF1E1B816EB42FA01A2EDE3 /* Build configuration list for PBXNativeTarget "MealOrbitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B6CC10E5548739D2C9E98BC8 /* Debug */,
+				682EAF15B3F8ED3FEC7CDBEA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		783E74B5B9D0EB47955CBF5A /* Build configuration list for PBXProject "MealOrbit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4125BF44423A1955F1DF9F78 /* Debug */,
+				57C27FE27DFB34FC199C6018 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D8DD5CCBE7B5FAC94A812CF7 /* Build configuration list for PBXNativeTarget "MealOrbit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1B87613F36FA7F94F8CE2902 /* Debug */,
+				C6AB09BB5F551B03E63EA3CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8FA55F0C08C4C96A838A6F9 /* Project object */;
+}

@@ -1,0 +1,9 @@
+Version 1.0 is the first public release of MealOrbit.
+
+The launch sequence introduces the product and writes Initial mass targets. Skip with defaults is available.
+
+Command Deck shows Today's burn and the four windows Apogee, Zenith, Perigee and Drift.
+
+Catalog Sweep and Telemetry Scan resolve products from Open Food Facts or the local shelf. Payload Dossier computes This portion from grams. Lock Window assigns eaten today or a future day.
+
+Burn Log, Fourteen-Day Horizon with drag and drop, Acquisition List and Mass Targets are included. An optional Local airlock passcode can be stored on the device. All user data stays local.

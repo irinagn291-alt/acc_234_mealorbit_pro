@@ -1,0 +1,14 @@
+MealOrbit is a personal food log for planning meals across a fourteen-day horizon. Search or scan packaged food, lock a portion into an orbit window, and keep every write on the device.
+
+• Command Deck shows Today's burn against the daily energy target, plus Protein, Carbs and Fat, and the four windows Apogee, Zenith, Perigee and Drift
+• Catalog Sweep searches Open Food Facts by name and merges results with the local shelf
+• Telemetry Scan reads barcodes with the camera, or accepts a Manual barcode or URL
+• Payload Dossier shows per 100 g energy and macros, a Portion mass field, and live totals for This portion
+• Lock Window assigns Apogee, Zenith, Perigee or Drift as eaten today or on a Future day. Drift remaps to Perigee on a future lock
+• Burn Log lists eaten items by window for a chosen day, with confirmed delete
+• Fourteen-Day Horizon is a 14-day grid. Hold a payload and drop it on another day or window. Each day shows projected kcal against the target
+• Acquisition List parks products to buy. Promote opens the Payload Dossier. Duplicates stay unique by barcode
+• Mass Targets edits Energy kcal, Protein g, Carbs g and Fat g. Optional Local airlock stores a passcode on the device. Reset all data wipes the local vault after confirmation
+• Launch sequence covers Two weeks on rails, Sweep and scan, Mass targets, and Initial mass targets. Skip with defaults writes 2100 kcal, 140 g protein, 220 g carbs and 70 g fat
+
+MealOrbit is a personal food log, not medical advice. Nutrition data is credited to Open Food Facts.
